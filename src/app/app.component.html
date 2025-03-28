@@ -1,47 +1,43 @@
-
 <style>
-  
-  .main
-  {
-    display: flex;
-    background-color: #DCB32C;
+  .main {
+    /* display: flex; */
+    /* flex-direction: column; */
+    background-color: #dcb32c;
     width: 100vw;
     height: 100vh;
-
   }
 
-  .head
-  {
+  .head {
     display: flex;
-    flex-direction: column;
-    background-color: #DCB32C;
+    flex-direction: row;
+    background-color: #dcb32c;
     width: 100%;
-    height: 75px;
-
+    height: 100px;
   }
-  
-  .label
-  {
-    display: flex;
-    background-color: #DCB32C;
-    width: 100%;
+
+  .parent-content {
+    /* display: flex; */
+    background-color: #dcb32c;
+    width: 1900px;
     height: 100%;
-    margin-top: 50px;
-    margin-left: 50px;
+    
     font-size: 1.5rem;
-
   }
 </style>
 
-<main class="main">
-  <div class="head">
-  <div class="nav">
-    <button (click)="navigateTo('home')">Home</button>
-    <button (click)="navigateTo('person')">Person</button> 
-  </div>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
-</main>
 
+<div class="main">
+
+  <div class="head">
+    
+    <button mat-button (click)="navigateTo('home')">Home</button>
+    <button mat-button (click)="navigateTo('person')">Person</button>
+  </div>
+
+  <div class="parent-content">
+    
+    <!-- <div class="content"> -->
+      <router-outlet></router-outlet>
+    <!-- </div> -->
+  </div>
+</div>

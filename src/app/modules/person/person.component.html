@@ -1,5 +1,125 @@
+
 <div class="main">
-    <div class="container">
-        <label class="homelabel">Person Page</label>
-    </div>
+  <div class="container">
+    <form class="person-details">
+      <div class="persoanlheadername">
+        <h1 class="homelabel">Person Details</h1>
+      </div>
+      <div class="personal-details-child">
+        <div class="name-label">
+          <mat-label>Person's Name</mat-label>
+        </div>
+        <div class="first-name">
+          <input matInput name="first" placeholder="First" />
+        </div>
+        <div class="last-name">
+          <input matInput name="last" placeholder="Last" />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="gender-label">
+          <mat-label>Gender</mat-label>
+        </div>
+
+        <div class="gender-grid">
+            <label class="malegender">
+              <input
+                type="checkbox"
+                name="gender"
+                value="Male"
+                                
+              />
+              Male
+            </label>
+
+            <label class="femalegender">
+              <input
+                type="checkbox"
+                name="gender"
+                value="Female"
+                
+              />
+              Female
+            </label>
+          </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="phone">
+          <mat-label>Phone</mat-label>
+        </div>
+        <div class="phone-text">
+          <input
+            matInput
+            type="tel"
+            name="phone"
+            placeholder="Phone (### ### ####)"
+          />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="dob">
+          <mat-label> Date of Birth </mat-label>
+        </div>
+        <div class="dob-text">
+          <input matInput type="date" name="dob" />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="address">
+          <mat-label>Address</mat-label>
+        </div>
+        <div class="address-text">
+          <input matInput name="addressline" placeholder="Street Address" />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="citystate">
+          <div class="select-empty-child"></div>
+          <div class="city-text">
+            <input matInput name="city" placeholder="city" />
+          </div>
+        </div>
+
+        <div class="full-width">
+          <input matInput name="state" placeholder="State" />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="select-empty-child"></div>
+
+        <div class="select-country">
+          <mat-select name="country">
+            <mat-option value="Select a Country">Select a Country</mat-option>
+            <mat-option value="UnitedStates">United States</mat-option>
+            <mat-option value="UnitedKingdom">United Kingdom</mat-option>
+            <mat-option value="Australia">Australia</mat-option>
+            <mat-option value="Germany">Germany</mat-option>
+            <mat-option value="France">France</mat-option>
+            <mat-option value="Canada">Canada</mat-option>
+            <mat-option value="Japan">Japan</mat-option>
+          </mat-select>
+        </div>
+
+        <div class="postal-text">
+          <input matInput placeholder="Postal / Zip Code" />
+        </div>
+      </div>
+
+      <div class="personal-details-child">
+        <div class="button-empty-child1"></div>
+        <div class="button-empty-child1"></div>
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
