@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { zip } from 'rxjs';
+import { PersonService } from './person.service';
 
 @Component({
   selector: 'app-person',
@@ -29,14 +31,44 @@ import { MatOptionModule } from '@angular/material/core';
 })
 export class PersonComponent {
 
-  first: string = '';
-  last: string = '';
-  phone: string = ''; // Add the phone property
-  dob: string = ''; // Added property for date of birth
-  addressline: string = ''; // Added property to fix the error
-  city: string = ''; // Added property to fix the error
-  state: string = ''; // Added state property
-  country: string = ''; // Added property to fix the error
-  Eircode: string = ''; // Added property for Postal / Zip Code
-  
+  constructor(private personService: PersonService) 
+  {
+
+  }
+person = {
+  "firstName": '',
+  "lastName": '',
+  "addressLine1": '', // Added property to fix the error
+  "addressLine2": '',    
+  "city": '', // Added property to fix the error
+  "country":  '', // Added property to fix the error
+  "eircode":  '', // Added property for Postal / Zip Code
+  "phoneNumber": '', // Add the phone property
+  "emailID":  '', // Added state property  
+}
+person2 = {
+dob: '',
+state: '',
+} 
+person1 = 
+{
+  "firstName": "John 8",
+  "lastName": "Doe",
+  "addressLine1": "123 Main Street",
+  "addressLine2": "Apt 4B",
+  "city": "New York",
+  "country": "USA",
+  "eircode": "10001",
+  "phoneNumber": "123-456-7890",
+  "emailID": "john.doe@example.com"
+}
+onSubmit()
+{
+  console.log(this.person);
+  this.personService.CreatePerson(this.person).subscribe(response => {
+    console.log('Post Created:', response);
+  });
+
+
+}
 }

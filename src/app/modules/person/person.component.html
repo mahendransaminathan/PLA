@@ -1,7 +1,7 @@
 
 <div class="main">
   <div class="container">
-    <form class="person-details">
+    <form class="person-details" (ngSubmit)="onSubmit()">
       <div class="persoanlheadername">
         <h1 class="homelabel">Person Details</h1>
       </div>
@@ -10,10 +10,10 @@
           <mat-label>Person's Name</mat-label>
         </div>
         <div class="first-name">
-          <input matInput name="first" placeholder="First" />
+          <input matInput name="first" placeholder="First" [(ngModel)] ="person.firstName">
         </div>
         <div class="last-name">
-          <input matInput name="last" placeholder="Last" />
+          <input matInput name="last" placeholder="Last" [(ngModel)] ="person.lastName"/>
         </div>
       </div>
 
@@ -55,7 +55,8 @@
             type="tel"
             name="phone"
             placeholder="Phone (### ### ####)"
-          />
+            [(ngModel)] ="person.phoneNumber"
+            />
         </div>
       </div>
 
@@ -64,7 +65,7 @@
           <mat-label> Date of Birth </mat-label>
         </div>
         <div class="dob-text">
-          <input matInput type="date" name="dob" />
+          <input matInput type="date" name="dob" [(ngModel)] ="person.emailID"/>
         </div>
       </div>
 
@@ -73,20 +74,19 @@
           <mat-label>Address</mat-label>
         </div>
         <div class="address-text">
-          <input matInput name="addressline" placeholder="Street Address" />
+          <input matInput name="addressline" placeholder="Street Address" [(ngModel)] ="person.addressLine1"/>
         </div>
       </div>
 
       <div class="personal-details-child">
-        <div class="citystate">
+        
           <div class="select-empty-child"></div>
           <div class="city-text">
-            <input matInput name="city" placeholder="city" />
+            <input matInput name="city" placeholder="city" [(ngModel)] ="person.city"/>
           </div>
-        </div>
-
+        
         <div class="full-width">
-          <input matInput name="state" placeholder="State" />
+          <input matInput name="state" placeholder="State" [(ngModel)] ="person.addressLine2"/>
         </div>
       </div>
 
@@ -94,7 +94,7 @@
         <div class="select-empty-child"></div>
 
         <div class="select-country">
-          <mat-select name="country">
+          <mat-select name="country" [(ngModel)] ="person.country">
             <mat-option value="Select a Country">Select a Country</mat-option>
             <mat-option value="UnitedStates">United States</mat-option>
             <mat-option value="UnitedKingdom">United Kingdom</mat-option>
@@ -107,7 +107,7 @@
         </div>
 
         <div class="postal-text">
-          <input matInput placeholder="Postal / Zip Code" />
+          <input matInput name="zip" placeholder="Postal / Zip Code" [(ngModel)] ="person.eircode"/>
         </div>
       </div>
 

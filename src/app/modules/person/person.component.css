@@ -76,8 +76,8 @@
   }
 
   mat-select {
-    width: 260px;
-    height: 45px;
+    width: 240px;
+    height: 40px;
     font-size: 1rem; /* Set font size for the dropdown text */
     padding: 8px; /* Add padding inside the dropdown */
     border: 1px solid   black;
@@ -92,6 +92,14 @@
     font-size: 1rem;    
     color: black;
     text-align: left;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button-empty-child1
+  {
+    width: 290px;
+    font-size: 1rem;
     align-items: center;
     justify-content: center;
   }

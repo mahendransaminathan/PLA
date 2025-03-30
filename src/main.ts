@@ -4,10 +4,12 @@ import { AppComponent } from './app/app.component';
 import { provideRouter } from '@angular/router';
 import { HomeComponent } from './app/modules/home/home.component';
 import { PersonComponent } from './app/modules/person/person.component';
+import { provideHttpClient } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, 
   {
     providers: [
+      provideHttpClient(),
       provideRouter([
         { path: 'home', component: HomeComponent},
         { path: 'person', component: PersonComponent },

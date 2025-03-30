@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
+import { PersonService } from './modules/person/person.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -24,8 +26,10 @@ import { MatOptionModule } from '@angular/material/core';
     FormsModule,
     MatRadioModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    HttpClientModule
    ],
+   providers: [PersonService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
